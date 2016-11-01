@@ -45,3 +45,7 @@ catalog.xml
 #########
 target
 
+# Dependencies #
+################
+/all-dependencies.txt
+dependencies.txt

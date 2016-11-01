@@ -30,6 +30,20 @@
     <artifactId>keycloak-saml-eap-integration-pom</artifactId>
     <packaging>pom</packaging>
 
+    <dependencyManagement>
+        <dependencies>
+            <!-- Purposely override the current AS parent -->
+            <!-- TODO: this should be properly isolated -->
+            <dependency>
+                <groupId>org.jboss.as</groupId>
+                <artifactId>jboss-as-parent</artifactId>
+                <version>${jboss.as.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
     <modules>
         <module>adapter</module>
         <module>subsystem</module>

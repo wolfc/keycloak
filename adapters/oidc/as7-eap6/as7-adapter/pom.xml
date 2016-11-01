@@ -83,15 +83,8 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>org.jboss.web</groupId>
-            <artifactId>jbossweb</artifactId>
-            <version>7.0.17.Final</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
             <groupId>org.jboss.as</groupId>
             <artifactId>jboss-as-web</artifactId>
-            <version>7.1.2.Final</version>
             <scope>provided</scope>
         </dependency>
         <dependency>

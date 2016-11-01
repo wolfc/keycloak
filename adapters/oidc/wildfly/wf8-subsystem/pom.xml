@@ -57,43 +57,50 @@
         </plugins>
     </build>
 
+    <dependencyManagement>
+        <dependencies>
+            <!-- TODO: this should be properly isolated -->
+            <dependency>
+                <groupId>org.wildfly</groupId>
+                <artifactId>wildfly-parent</artifactId>
+                <version>${wildfly.version}</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
     <dependencies>
         <dependency>
             <groupId>org.wildfly</groupId>
             <artifactId>wildfly-controller</artifactId>
-            <version>${wildfly.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.wildfly</groupId>
             <artifactId>wildfly-server</artifactId>
-            <version>${wildfly.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.wildfly</groupId>
             <artifactId>wildfly-web-common</artifactId>
-            <version>${wildfly.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.jboss.logging</groupId>
             <artifactId>jboss-logging-annotations</artifactId>
-            <version>${jboss.logging.tools.wf8.version}</version>
             <scope>provided</scope>
         </dependency>
 
         <dependency>
             <groupId>org.jboss.logging</groupId>
             <artifactId>jboss-logging-processor</artifactId>
-            <version>${jboss.logging.tools.wf8.version}</version>
             <scope>provided</scope>
         </dependency>
 
         <dependency>
             <groupId>org.wildfly</groupId>
             <artifactId>wildfly-subsystem-test-framework</artifactId>
-            <version>${wildfly.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
